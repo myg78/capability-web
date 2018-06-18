@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.c-title {
+	color: white;
+	background-color: #012C5F;
+	padding: 7px 7px 7px 15px;
+}
+
+
+.c-fqdn-table {
+	font-size: 14px;
+}
+
+table.c-fqdn-table th {
+	color: #fff;
+	background-color: #012C5F;
+	font-size: 12px;
+}
+
+.c-app-catalog-row {
+	background-color: #ffc000;
+}
+
+.c-db-catalog-row {
+	color: #fff;
+	background-color: #996633;
+}
+
+.c-interface-catalog-row {
+	background-color: #a3a3e0;
+}

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("test.css");
 /**
 Dashboard UI
  */
@@ -587,7 +588,8 @@ pre code {
 
 @media (min-width: 1280px) {
   .container {
-    max-width: 1200px;
+/*     max-width: 1200px; */
+    max-width: 1250px;
   }
 }
 

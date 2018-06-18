@@ -218,8 +218,8 @@
                 <div class="card">
 <!--                   <div class="card-status bg-blue"></div> -->
                   <div class="card-header">
-                    <h3 class="card-title">Mission Critical Applications - Axis</h3>
-                    <a href="#" data-toggle="popover" title="Decription" data-content="Some content inside the popover" data-placement="right"><i class="dropdown-icon fe fe-info ml-2"></i></a>
+                    <h3 class="card-title">Axis - AXS</h3>
+                    <a href="#" data-toggle="popover" title="Decription" data-content="Application used by reservation agents to perform functions like book, reissue, check flights, seat assignment, check fares, Shop, Get SM info, etc." data-placement="right"><i class="dropdown-icon fe fe-info ml-2"></i></a>
                     <div class="card-options">
                       <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                     </div>
@@ -228,43 +228,247 @@
 
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Interface Diagrams</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Server Catalog</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Interface Catalog</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">Steps to activate ATL-1 instance</a></li>
+							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home"><i class="fe fe-image"></i>Interface Diagrams</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1"><i class="fe fe-server"></i>Application Catalog</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2"><i class="fe fe-database"></i> Database Catalog</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3"><i class="fe fe-cpu"></i>Interface Catalog</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu4"><i class="fe fe-chevrons-right"></i>Steps to activate ATL-1 instance</a></li>
 						</ul>
 
 						<!-- Tab panes -->
 						<div class="tab-content">
 							<div id="home" class="tab-pane active">
-								<br>
-								<h3>Reference Architecture</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed do eiusmod tempor incididunt ut labore et dolore
-									magna aliqua.</p>
+							
+								<div class="container mt-3">
+									<div class="row">
+										<div class="col-md-2 border-right pl-0">
+											<ul class="nav flex-column" role="tablist">
+												<li class="border-bottom py-2"><a class="nav-link active" data-toggle="tab" href="#diagram1">Reference Interface Architecture</a></li>
+												<li class="border-bottom py-2"><a class="nav-link" data-toggle="tab" href="#diagram2">Normal Operation</a></li>
+												<li class="border-bottom py-2"><a class="nav-link" data-toggle="tab" href="#diagram3">Fail-Over Operation</a></li>
+												<li class="border-bottom py-2"><a class="nav-link" data-toggle="tab" href="#diagram4">Pilot Operation</a></li>
+											</ul>
+										</div>
+										<div class="col-md-10">
+											<div class="tab-content" id="myTabContent">
+											
+												<div id="diagram1" class="tab-pane active">
+													<h3 class="c-title">Axis – AXS – Reference Interface Architecture</h3>
+													<img src="./demo/test/axs-logical.png" alt="Logical">
+												</div>
+												<div id="diagram2" class="tab-pane">
+													<h3 class="c-title">Axis – AXS – Normal Operation</h3>
+													<img src="./demo/test/axs-normal.png" alt="Normal">
+												</div>
+												<div id="diagram3" class="tab-pane">
+													<h3 class="c-title">Axis – AXS – Fail-Over Operation</h3>
+													<img src="./demo/test/axs-failover.png" alt="Fail-Over">
+												</div>
+												<div id="diagram4" class="tab-pane">
+													<h3 class="c-title">Axis – AXS – Pilot Operation</h3>
+													<img src="./demo/test/axs-pilot.png" alt="Pilot">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div id="menu1" class="tab-pane fade">
 								<br>
-								<h3>Service Catalog</h3>
-								<p>Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<h3>Application Catalog</h3>
+								
+								<table class="table table-bordered table-hover c-fqdn-table">
+								  <thead>
+								    <tr>
+								      <th scope="col">ID</th>
+								      <th scope="col">Application Components</th>
+								      <th scope="col">FQDN</th>
+								      <th scope="col">Server Name</th>
+								      <th scope="col">PCI/SNS</th>
+								      <th scope="col">Active in RCC | ACC</th>
+								      <th scope="col">Active in MSPJ</th>
+								      <th scope="col">Active in ATL-1</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								  
+								    <tr>
+								      <td scope="row" class="c-app-catalog-row">C-01-1Y</td>
+								      <td>Application</td>
+								      <td>axis.delta.com</td>
+								      <td>sxpda00173.delta.com</td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								    
+								    <tr>
+								      <td scope="row" class="c-app-catalog-row">C-02-1Y</td>
+								      <td>WXS Cache</td>
+								      <td>
+								      	<ul class="list-unstyled">
+								      		<li>axsxpct21a.delta.com</li>
+								      		<li>axsxpct22a.delta.com</li>
+								      		<li>axsxpct23a.delta.com</li>
+								      		<li>axsxpct24a.delta.com</li>
+								      	</ul>
+								      </td>
+								      <td>
+								      	<ul class="list-unstyled">
+								      		<li>sxpda00530.delta.com</li>
+								      		<li>sxpda00531.delta.com</li>
+								      		<li>sxpda00532.delta.com</li>
+								      		<li>sxpda00533.delta.com</li>
+								      	</ul>
+								      </td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								    
+								    <tr>
+								      <td scope="row" class="c-app-catalog-row">C-02-2Y</td>
+								      <td>WXS Catalog</td>
+								      <td>
+								      	<ul class="list-unstyled">
+								      		<li>axsxpcs21a.delta.com</li>
+								      		<li>axsxpcs22a.delta.com</li>
+								      		<li>axsxpcs23a.delta.com</li>
+								      	</ul>
+								      </td>
+								      <td>
+								      	<ul class="list-unstyled">
+								      		<li>sxpda10025.delta.com</li>
+								      		<li>sxpda10026.delta.com</li>
+								      		<li>sxpda10027.delta.com</li>
+								      	</ul>
+								      </td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								    
+								  </tbody>
+								</table>
+								
+								<div class="card card-collapsed">
+				                  <div class="card-header">
+				                    <h3 class="card-title"><a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i> View Diagram</a></h3>
+				                    <div class="card-options">
+				                      <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+				                    </div>
+				                  </div>
+				                  <div class="card-body">
+				                  	<h3 class="c-title">Axis – AXS – Reference Interface Architecture</h3>
+									<img src="./demo/test/axs-logical.png" alt="Logical">
+				                  </div>
+				                </div>
+				                
 							</div>
+							
 							<div id="menu2" class="tab-pane fade">
 								<br>
-								<h3>Interface Catalog</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit
-									voluptatem accusantium doloremque laudantium, totam rem
-									aperiam.</p>
+								<h3>Database Catalog</h3>
+								<table class="table table-bordered table-hover c-fqdn-table">
+								  <thead>
+								    <tr>
+								      <th scope="col">ID</th>
+								      <th scope="col">Server / VIP</th>
+								      <th scope="col">Database FQDN</th>
+								      <th scope="col">Connection String</th>
+								      <th scope="col">PCI/SNS</th>
+								      <th scope="col">Active in RCC | ACC</th>
+								      <th scope="col">Active in MSPJ</th>
+								      <th scope="col">Active in ATL-1</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td scope="row" class="c-db-catalog-row">D-01-10</td>
+								      <td>r2pldc2a.delta.com</td>
+								      <td>axsop01.delta.com</td>
+								      <td>jdbc:oracle:thin:@axsop01.delta.com:9426:axsop01</td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								  </tbody>
+								</table>
 							</div>
+							
 							<div id="menu3" class="tab-pane fade">
 								<br>
-								<h3>Steps</h3>
+								<h3>Interface Catalog</h3>
+								<table class="table table-bordered table-hover c-fqdn-table">
+								  <thead>
+								    <tr>
+								      <th scope="col">ID</th>
+								      <th scope="col">Interface</th>
+								      <th scope="col">Protocol</th>
+								      <th scope="col">Source FQDN</th>
+								      <th scope="col">Destination FQDN</th>
+								      <th scope="col">Port</th>
+								      <th scope="col">Active in RCC | ACC</th>
+								      <th scope="col">Active in MSPJ</th>
+								      <th scope="col">Active in ATL-1</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td scope="row" class="c-interface-catalog-row">D-01-10</td>
+								      <td>Application – Database (AXSOP01)</td>
+								      <td>JDBC</td> 
+								      <td>axis.delta.com</td>
+								      <td>r2pldc2a.delta.com</td>
+								      <td>9426</td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								      <td></td>
+								      <td></td>
+								    </tr>
+								    
+								    <tr>
+								      <td scope="row" class="c-interface-catalog-row">I-01-10</td>
+								      <td>Application – SOA / Active Matrix</td>
+								      <td>HTTPS</td>
+								      <td>axis.delta.com</td>
+								      <td>webservices.delta.com</td>
+								      <td>30000-39999</td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								    
+								    <tr>
+								      <td scope="row" class="c-interface-catalog-row">I-02-10</td>
+								      <td>Application – Datapower</td>
+								      <td>HTTPS</td>
+								      <td>axis.delta.com</td>
+								      <td>soaws.delta.com</td>
+								      <td>12000</td>
+								      <td></td>
+								      <td></td>
+								      <td class="text-center"><i class="dropdown-icon fe fe-check"></i></td>
+								    </tr>
+								    
+								  </tbody>
+								</table>
+								
+								
+							</div>
+							
+							<div id="menu4" class="tab-pane fade">
+								<br>
+								<h3>Steps to activate ATL-1 instance</h3>
 								<p>Sed ut perspiciatis unde omnis iste natus error sit
 									voluptatem accusantium doloremque laudantium, totam rem
 									aperiam.</p>
 							</div>
+							
 						</div>
-
 
 					</div>
                 </div>
