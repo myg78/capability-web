@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="./assets/js/js-sequence/webfont.js"></script>
+<script src="./assets/js/js-sequence/snap.svg-min.js"></script>
+<script src="./assets/js/js-sequence/underscore-min.js"></script>
+<script src="./assets/js/js-sequence/sequence-diagram-min.js"></script>
+
+</head>
+<body>
+test test
+
+<div id="diagram" class="c-sequence"></div>
+<script> 
+
+	var text = 	"Participant Delta.com\n" +
+				"Participant ITAShoppingProcess\n" +
+				"Participant ITA Shop API\n" +
+				"Delta.com->ITAShoppingProcess: Shop\n" +
+				"ITAShoppingProcess->ITA Shop API: Shop Request\n" +
+				"ITA Shop API-->ITAShoppingProcess: Shop Response\n" +
+				"ITAShoppingProcess->Delta.com: Shop Response\n"
+				;
+	
+	var d = Diagram.parse(text);
+	var options = {theme: 'simple'};
+  	d.drawSVG('diagram', options);
+</script>
+
+</body>
+</html>

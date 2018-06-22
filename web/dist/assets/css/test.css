@@ -29,3 +29,16 @@ table.c-fqdn-table th {
 .c-interface-catalog-row {
 	background-color: #a3a3e0;
 }
+
+.c-sequence .actor rect, 
+.c-sequence .actor path {
+    fill: #bbe0e3; /* #72bfc5 */
+    font-family: Arial;
+}
+
+.c-sequence .actor text tspan,
+.c-sequence .signal text tspan {
+    font-family: "Source Sans Pro", Calibri, Arial;
+    font-size: 14px;
+    text-align: left;
+}
